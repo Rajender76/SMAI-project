@@ -140,8 +140,10 @@ def display_random_video_frames(dataset_path, num_frames=20):
         else:
             print(f"Skipping empty directory: {selected_class_name}") # Print a message if the directory is empty
 
+    plt.savefig("/content/drive/MyDrive/figures/randomframes.png", bbox_inches='tight')
     # Show the Matplotlib figure with the randomly selected frames.
     plt.show()
+
 
 
 # Example usage:
@@ -199,7 +201,9 @@ def analyze_frame_counts(dataset_dir, classes_list):
     plt.xticks(x, classes_list, rotation=45)
     plt.legend()
     plt.grid(axis='y', linestyle="--", alpha=0.7)
+    plt.savefig("/content/drive/MyDrive/figures/framecount.png", bbox_inches='tight')
     plt.show()
+
 
     return frame_stats  # Return statistics dictionary
 
@@ -280,6 +284,7 @@ def analyze_frame_counts_and_fps(dataset_dir, classes_list):
     plt.xticks(x, classes_list, rotation=45)
     plt.legend()
     plt.grid(axis='y', linestyle="--", alpha=0.7)
+    plt.savefig("/content/drive/MyDrive/figures/frames.png", bbox_inches='tight')
     plt.show()
 
     # Bar Chart Visualization for FPS
@@ -294,6 +299,7 @@ def analyze_frame_counts_and_fps(dataset_dir, classes_list):
     plt.xticks(x, classes_list, rotation=45)
     plt.legend()
     plt.grid(axis='y', linestyle="--", alpha=0.7)
+    plt.savefig("/content/drive/MyDrive/figures/fps.png", bbox_inches='tight')
     plt.show()
 
     return frame_stats, fps_stats
@@ -359,6 +365,7 @@ def plot_dataset_statistics(class_counts, video_durations, frame_rates):
 
 
     plt.tight_layout()
+    plt.savefig("/content/drive/MyDrive/figures/allthree.png", bbox_inches='tight')
     plt.show()
 
 # Example usage
@@ -435,6 +442,7 @@ plt.title("Video Duration Statistics per Cricket Shot Class")
 plt.xticks(x, classes, rotation=45)
 plt.legend()
 plt.grid(axis="y", linestyle="--", alpha=0.6)
+plt.savefig("/content/drive/MyDrive/figures/duration.png", bbox_inches='tight')
 
 plt.show()
 
@@ -538,9 +546,10 @@ def count_videos_per_class(dataset_dir, classes_list):
     plt.title("Number of Videos per Shot Class")
     plt.xticks(rotation=45)
     plt.grid(axis='y', linestyle="--", alpha=0.7)
+    plt.savefig("/content/drive/MyDrive/figures/noofvideos_perclass_bar.png", bbox_inches='tight')
     plt.show()
-
     return video_counts
+dataset_path="/content/drive/MyDrive/CricShot10 dataset"
 video_counts = count_videos_per_class(dataset_path, categories[0])
 
 print(video_counts)
@@ -626,6 +635,7 @@ def count_videos_pie_chart_plotly(dataset_dir, classes_list):
         height=600  # Set height to control overall size
     )
 
+    plt.savefig("/content/drive/MyDrive/figures/videocount_pie.png", bbox_inches='tight')
     # Show the plot
     fig.show()
 
@@ -731,6 +741,7 @@ def compute_optical_flow_per_shot(video_path, class_label, num_frames=10):
         prev_gray = next_gray  # Update previous frame
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])  # Adjust layout to avoid overlap
+    plt.savefig("/content/drive/MyDrive/figures/opticalflow.png", bbox_inches='tight')
     plt.show()
     cap.release()
 
@@ -812,6 +823,7 @@ def compute_optical_flow_per_shot(video_path, class_label, num_frames=10):
         prev_gray = next_gray  # Update previous frame
 
     plt.tight_layout(rect=[0, 0, 1, 0.95])  # Adjust layout to avoid overlap
+    plt.savefig("/content/drive/MyDrive/figures/motiondetection.png", bbox_inches='tight')
     plt.show()
     cap.release()
 
@@ -936,6 +948,7 @@ plt.ylabel("Dimension 2")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig("/content/drive/MyDrive/figures/tsne-40.png", bbox_inches='tight')
 plt.show()
 
 
@@ -1005,6 +1018,7 @@ plt.ylabel("Dimension 2")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig("/content/drive/MyDrive/figures/tsne-90.png", bbox_inches='tight')
 plt.show()
 
 import os
@@ -1072,5 +1086,6 @@ plt.ylabel("Dimension 2")
 plt.legend()
 plt.grid(True)
 plt.tight_layout()
+plt.savefig("/content/drive/MyDrive/figures/tsne-motion_capture.png", bbox_inches='tight')
 plt.show()
 
