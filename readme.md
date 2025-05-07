@@ -47,4 +47,4 @@ the input_videos.zip contains the test videos, model_weights.pth is the location
 
 ## INFER SET DIRECTORY- https://drive.google.com/drive/folders/1i25JVrS3VuuxGDuiGRLxE9oCPJPiucNx
 
-## MODEL PATH - https://drive.google.com/drive/folders/1i25JVrS3VuuxGDuiGRLxE9oCPJPiucNx
+## MODEL PATH - https://drive.google.com/file/d/1cjqbVYFLIXRrx75z7QMEI_uoa6Oylpw6/view?usp=sharing
